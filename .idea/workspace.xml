@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f56bff96-4a48-4a53-b563-f58b1bcea7dd" name="Default" comment="" />
+    <list default="true" id="f56bff96-4a48-4a53-b563-f58b1bcea7dd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/WidgetTests.java" afterPath="$PROJECT_DIR$/src/test/java/WidgetTests.java" />
+    </list>
     <ignored path="Google Toolkit.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,12 +38,12 @@
       <file leaf-file-name="WidgetTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/WidgetTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33009708">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.68770224">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
+                <element signature="e#1343#1344#0" expanded="true" />
+                <element signature="e#1373#1374#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -514,6 +516,18 @@
     <history-entry file="WidgetTests_checkBoxTest - 2015.12.16 at 22h 43m 26s.xml">
       <configuration name="WidgetTests.checkBoxTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WidgetTests_checkBoxTest - 2015.12.16 at 23h 00m 50s.xml">
+      <configuration name="WidgetTests.checkBoxTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WidgetTests_checkBoxTest - 2015.12.16 at 23h 01m 32s.xml">
+      <configuration name="WidgetTests.checkBoxTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WidgetTests_checkBoxTest - 2015.12.16 at 23h 05m 59s.xml">
+      <configuration name="WidgetTests.checkBoxTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WidgetTests_checkBoxTest - 2015.12.16 at 23h 06m 54s.xml">
+      <configuration name="WidgetTests.checkBoxTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1874" height="1096" extended-state="6" />
@@ -565,12 +579,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/WidgetTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33009708">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.68770224">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class WidgetTests {
     WebDriver driver = new FirefoxDriver();
 
+
     @Test
 
     public void checkBoxTest() {
@@ -22,6 +23,17 @@ public class WidgetTests {
         WebElement fridayCheckBox = driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[4]/div/div[3]/div/div[3]/div/div[2]/div/div[2]/div/div[3]/div/div/table/tbody/tr[6]/td/span/input"));
         fridayCheckBox.click();
     }
+
+    @Test
+
+    public void radioButtonTest() {
+
+        //Go To Radio Button tab
+        WebElement radioButtons = driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[4]/div/div[2]/div/div/div/div/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]"));
+        radioButtons.click();
+
+    }
+
     @After
     public void tearDown() {
         driver.close();
