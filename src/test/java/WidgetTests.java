@@ -1,12 +1,15 @@
 import org.junit.After;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class WidgetTests {
     WebDriver driver = new FirefoxDriver();
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+
 
 
     @Test
@@ -17,22 +20,42 @@ public class WidgetTests {
         driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwCheckBox");
 
         //Click on Monday checkbox
-        WebElement mondayCheckBox = driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[4]/div/div[3]/div/div[3]/div/div[2]/div/div[2]/div/div[3]/div/div/table/tbody/tr[2]/td/span/input"));
-        mondayCheckBox.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[id=\"gwt-debug-cwCheckBox-Monday-input\"]")));
+        driver.findElement(By.cssSelector("input[id=\"gwt-debug-cwCheckBox-Monday-input\"]")).click();
         //Click on Friday checkbox
-        WebElement fridayCheckBox = driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[4]/div/div[3]/div/div[3]/div/div[2]/div/div[2]/div/div[3]/div/div/table/tbody/tr[6]/td/span/input"));
-        fridayCheckBox.click();
+        driver.findElement(By.cssSelector("input[id=\"gwt-debug-cwCheckBox-Friday-input\"]")).click();
     }
+
 
     @Test
 
-    public void radioButtonTest() {
+    public void basicButtons() {
 
-        //Go To Radio Button tab
-        WebElement radioButtons = driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[4]/div/div[2]/div/div/div/div/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]"));
-        radioButtons.click();
+        //Go to Basic Button tab
+        driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwBasicButton");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[id='gwt-debug-cwBasicButton-normal']")));
+        //Click Basic Button
+        driver.findElement(By.cssSelector("button[id='gwt-debug-cwBasicButton-normal']")).click();
 
+        //Handle JS alert
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+
+        //Check the disabled button
+        WebElement disabledButton = driver.findElement(By.id("gwt-debug-cwBasicButton-disabled"));
+        if (disabledButton.isEnabled()) {
+            driver.findElement(By.id("gwt-debug-cwBasicButton-disabled")).click();
+            System.out.println("the button is enabled");
+        } else {
+            System.out.println("the button is disabled");
+        }
     }
+     @Test
+
+    public void datePicker() {
+         
+     }
+
 
     @After
     public void tearDown() {
