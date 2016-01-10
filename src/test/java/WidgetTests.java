@@ -2,6 +2,7 @@ import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -52,10 +53,24 @@ public class WidgetTests {
     }
      @Test
 
-    public void datePicker() {
-         
-     }
 
+     public void hoverOver() {
+
+         driver.get("http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwMenuBar");
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"gwt-debug-cwMenuBar-item0\"]")));
+
+         WebElement element = driver.findElement(By.xpath("//*[@id=\"gwt-debug-cwMenuBar-item0\"]"));
+
+         Actions action = new Actions(driver);
+
+         action.moveToElement(element).build().perform();
+
+         driver.findElement(By.xpath("//*[@id=\"gwt-debug-cwMenuBar-item0-item0\"]")).click();
+
+         Alert alert = driver.switchTo().alert();
+         alert.accept();
+
+     }
 
     @After
     public void tearDown() {
